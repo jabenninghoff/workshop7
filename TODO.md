@@ -1,3 +1,3 @@
 # TODO
 
-- [ ] Add TODO items here
+- [ ] Add workshop lab notebook
