@@ -2,3 +2,4 @@
 ^renv\.lock$
 ^workshop7\.Rproj$
 ^\.Rproj\.user$
+^LICENSE\.md$
