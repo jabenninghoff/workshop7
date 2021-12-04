@@ -1,3 +1,5 @@
-# workshop7 0.0.0.9000
+# workshop7 1.0.0
 
-* Added a `NEWS.md` file to track changes to the package.
+* Initial release
+
+* Added SRA Workshop 7 Notes: Notes for SRA 2021 Workshop 7, "Monte Carlo simulation and probability bounds analysis in R with hardly any data (Instructors: Ferson & Grey)" held 2021-12-05
