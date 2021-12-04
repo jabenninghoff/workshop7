@@ -1,10 +1,11 @@
 Package: workshop7
-Title: What the Package Does (One Line, Title Case)
+Title: SRA 2021 Workshop 7
 Version: 0.0.0.9000
 Authors@R: 
     person("John", "Benninghoff", , "jbenninghoff@mac.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-6230-4742"))
-Description: What the package does (one paragraph).
+Description: Analysis package for SRA 2021 Workshop 7: Monte Carlo simulation and
+    probability bounds analysis in R with hardly any data
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
