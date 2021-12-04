@@ -1,0 +1,34 @@
+---
+title: SRA Workshop 7 Notes
+date: '2021-12-04'
+output:
+  html_notebook:
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+---
+
+Notes for SRA 2021 Workshop 7, "Monte Carlo simulation and probability bounds analysis in R with hardly any data (Instructors: Ferson & Grey)" held 2021-12-05.
+
+```{r setup, message=FALSE, warning=FALSE}
+library(workshop7)
+```
+
+# Description
+
+Description from <https://www.sra.org/events-webinars/annual-meeting/program/annual-meeting-workshops/>:
+
+**Workshop #7: Full Day 8AM-5PM** | Monte Carlo simulation and probability bounds analysis in R with hardly any data (Instructors: Ferson & Grey)
+
+* Features hands-on examples worked in R on your own laptap, from raw data to final decision.
+* Introduces and compares Monte Carlo simulation and probability bounds analysis for developing probabilistic risk analyses when little or no empirical data are available.
+* You can use your laptop to work the examples, or just follow along if you prefer.
+* The examples illustrate the basic problems risk analysts face: not having much data to estimate inputs, not knowing the distribution shapes, not knowing their correlations, and not even being sure about the model form.
+* Monte Carlo models will be parameterized using the method of matching moments and other common strategies.
+* Probability bounds will be developed from both large and small data sets, from data with non-negligible measurement uncertainty, and from published summaries that lack data altogether.
+* Explains how to avoid common pitfalls in risk analyses, including the multiple instantiation problem, unjustified independence assumptions, repeated variable problem, and what to do when there’s little or no data.
+* The numerical examples will be developed into fully probabilistic estimates useful for quantitative decisions and other risk-informed planning.
+* Emphasis will be placed on the interpretation of results and on how defensible decisions can be made even when little information is available.
+* The presentation style will be casual and interactive.
+* Participants will receive handouts of the slides and electronic files with software for the examples.
