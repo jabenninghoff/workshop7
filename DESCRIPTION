@@ -13,4 +13,7 @@ RoxygenNote: 7.1.2
 URL: https://jabenninghoff.github.io/workshop7/, https://github.com/jabenninghoff/workshop7
 BugReports: https://github.com/jabenninghoff/workshop7/issues
 Suggests: 
-    devtools
+    devtools,
+    rdev (>= 0.4.2)
+Remotes:  
+    jabenninghoff/rdev
