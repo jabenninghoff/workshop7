@@ -506,16 +506,16 @@
     },
     "rdev": {
       "Package": "rdev",
-      "Version": "0.4.2",
+      "Version": "0.4.3",
       "Source": "GitHub",
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
       "RemoteUsername": "jabenninghoff",
       "RemoteRepo": "rdev",
       "RemoteRef": "main",
-      "RemoteSha": "21ec592777c00f5bd7002c01f8b3b865d2133432",
+      "RemoteSha": "2ccb643bd278c0fe338f6caae8b8021f06bb1b0a",
+      "RemoteHost": "api.github.com",
       "Remotes": "jimhester/lintr",
-      "Hash": "67e834854e9876d9e1a28d6701650e58"
+      "Hash": "13f9532ab63d258b9800a933fbf18bc7"
     },
     "rematch2": {
       "Package": "rematch2",
