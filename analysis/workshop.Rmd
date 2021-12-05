@@ -15,20 +15,21 @@ Working notebook for SRA 2021 Workshop 7, "Monte Carlo simulation and probabilit
 library(workshop7)
 library(MASS)
 library(sn)
-source("sra.R")
 ```
 
 # Instructions
 
-Download `sra.r` from <https://sites.google.com/site/hardlyanydata> and source it into R. Set `RStudio = TRUE` for use within RStudio and save the file. The library also requires the package `sn`.
+Download `sra.r` from <https://sites.google.com/site/hardlyanydata> and source it into R. Set `RStudio = TRUE` for use within RStudio and save the file. The library also requires the package `sn`. Use `rm(list = ls())` to clear R enviornment.
 
-# First Example
+# Monte Carlo
 
-First example from class; contaminant plume (from Lobascio), slide 37-39 in the workshop [PowerPoint](assets/NoData-2021-Zoom.pptx):
+Monte Carlo example from class using `sra.R`; contaminant plume (from Lobascio), slide 37-39 in the workshop [PowerPoint](assets/NoData-2021-Zoom.pptx):
 
 View the cumulative probability plot by entering the letter in the console.
 
 ```{r T}
+source("sra.R")
+
 L <- uniform(80, 120) # [m], source-receptor distance
 i <- uniform(0.0003, 0.0008) # [], hydraulic gradient
 K <- lognormal(1000, 750) # [m yr1], hydraulic conductivity
@@ -38,6 +39,8 @@ foc <- uniform(0.0001, 0.005) # fraction organic carbon
 Koc <- normal(10, 3) # [m3 per kg], partition coefficient
 
 T <- (n + BD * foc * Koc) * L / (K * i) # all variables assumed independent
+summary(T)
+T
 ```
 
 Truncated version, from slide 40:
@@ -74,6 +77,34 @@ foc <- MEmmms(0.0001, 0.005, 0.00255, 0.001415) # fraction organic carbon
 Koc <- MEmmms(5, 20, 10, 3) # organic partition coefficient
 
 Tind <- (n + BD * foc * Koc) * L / (K * i)
+summary(Tind)
+Tind
+```
+
+# Probability Bounds Analysis
+
+Conduct the same analysis using PBA, from slide 162. See the important note from slide 162 below.
+
+*Note: N.B. The implementation of mmms in pba.r is incomplete so, while its results are bounds, they are not best possible bounds*
+
+```{r Tind_pba}
+# ideally we'd clear the environment with `rm(list = ls())`, but that doesn't work here;
+# an alternative would be to move this to a separate notebook. This approach appears to be OK,
+# outputs from running just the setup and the entire notebook are the same.
+source("pba.R")
+
+L <- mmms(80, 120, 100, 11.55) # source-receptor distance
+i <- mmms(0.0003, 0.0008, 0.00055, 0.0001443) # hydraulic gradient
+K <- mmms(300, 3000, 1000, 750) # hydraulic conductivity
+n <- mmms(0.2, 0.35, 0.25, 0.05) # effective soil porosity
+BD <- mmms(1500, 1750, 1650, 100) # soil bulk density
+foc <- mmms(0.0001, 0.005, 0.00255, 0.001415) # fraction organic carbon
+Koc <- mmms(5, 20, 10, 3) # organic partition coefficient
+
+up <- 100000 # detail
+Tind <- (n + BD * foc * Koc) * L / (K * i)
+Tind <- pmin(Tind, up)
+
 summary(Tind)
 Tind
 ```

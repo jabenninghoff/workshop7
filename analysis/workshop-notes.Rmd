@@ -43,6 +43,20 @@ Application of these methods requires judgement; choices of distributions and me
 
 Monte Carlo assumes that each variable is independent, and different. Be careful about how values are represented, see slide 88, and be careful about variables that are not independent.
 
+Probability bounds analysis (slide 111) is more rigorous than Monte Carlo, and works with even terrible data.
+
+Robust Bayesian analysis (slide 115) addresses the problem of arbitrary priors by using multiple appropriate priors - this is the missing piece that has always bothered me about Bayesian math.
+
+PBA is really interesting way to communicate both variability and ambiguity. Is PBA better at communicating ambiguity than MC? [Quite possibly]
+
+What if we added a p-box to a Monte Carlo CDF? (or complementary CDF?) this should add insight into the level of ambiguity (epistemic uncertainty).
+
+What we're doing with FAIR and similar analyses is really just scratching the surface of what's possible.
+
+Second-order Monte Carlo analysis will be bounded within the p-box, and it's highly unlikely it will show the complete p-box.
+
+Are Monte Carlo and PBA combined? Yes, they are "nested" typically. This is what's done in [Info-Gap Analysis](https://en.wikipedia.org/wiki/Info-gap_decision_theory) - first present a more deterministic solution with all assumptions, then a p-box showing when the assumptions are relaxed.
+
 # Workshop Site
 
 Additional links and downloads available at <https://sites.google.com/site/hardlyanydata> (files have been downloaded to this repository):
