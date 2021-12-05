@@ -17,7 +17,7 @@ library(workshop7)
 
 # Description
 
-Description from <https://www.sra.org/events-webinars/annual-meeting/program/annual-meeting-workshops/>:
+Description from <https://www.sra.org/events-webinars/annual-meeting/program/annual-meeting-workshops/>. Attend virtual session on [Pathable](https://sra21.us2.pathable.com/meetings/virtual/9G8ri2iAPqvT5iz5q).
 
 **Workshop #7: Full Day 8AM-5PM** | Monte Carlo simulation and probability bounds analysis in R with hardly any data (Instructors: Ferson & Grey)
 
