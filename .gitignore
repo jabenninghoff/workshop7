@@ -41,6 +41,7 @@ vignettes/*.pdf
 # macOS
 .DS_Store
 *.swp
+~$*
 
 # analysis package generated files
 # see: https://jabenninghoff.github.io/rdev/articles/analysis-package-layout.html
