@@ -20,6 +20,9 @@ Notebooks:
 -   SRA Workshop 7 Notes: Notes for SRA 2021 Workshop 7, “Monte Carlo
     simulation and probability bounds analysis in R with hardly any data
     (Instructors: Ferson & Grey)” held 2021-12-05.
+-   SRA Workshop 7: Working notebook for SRA 2021 Workshop 7, “Monte
+    Carlo simulation and probability bounds analysis in R with hardly
+    any data (Instructors: Ferson & Grey)”
 
 ## Installation
 
