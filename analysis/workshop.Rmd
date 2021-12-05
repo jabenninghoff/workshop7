@@ -1,0 +1,79 @@
+---
+title: SRA Workshop 7
+date: '2021-12-05'
+output:
+  html_notebook:
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+---
+
+Working notebook for SRA 2021 Workshop 7, "Monte Carlo simulation and probability bounds analysis in R with hardly any data (Instructors: Ferson & Grey)"
+
+```{r setup, message=FALSE, warning=FALSE}
+library(workshop7)
+library(MASS)
+library(sn)
+source("sra.R")
+```
+
+# Instructions
+
+Download `sra.r` from <https://sites.google.com/site/hardlyanydata> and source it into R. Set `RStudio = TRUE` for use within RStudio and save the file. The library also requires the package `sn`.
+
+# First Example
+
+First example from class; contaminant plume (from Lobascio), slide 37-39 in the workshop [PowerPoint](assets/NoData-2021-Zoom.pptx):
+
+View the cumulative probability plot by entering the letter in the console.
+
+```{r T}
+L <- uniform(80, 120) # [m], source-receptor distance
+i <- uniform(0.0003, 0.0008) # [], hydraulic gradient
+K <- lognormal(1000, 750) # [m yr1], hydraulic conductivity
+n <- lognormal(0.25, 0.05) # [], effective soil porosity
+BD <- lognormal(1650, 100) # [kg per m3], soil bulk density
+foc <- uniform(0.0001, 0.005) # fraction organic carbon
+Koc <- normal(10, 3) # [m3 per kg], partition coefficient
+
+T <- (n + BD * foc * Koc) * L / (K * i) # all variables assumed independent
+```
+
+Truncated version, from slide 40:
+
+```{r T_truncated}
+L <- uniform(80, 120) # [m], source-receptor distance
+i <- uniform(0.0003, 0.0008) # [], hydraulic gradient
+K <- lognormal(1000, 750) # [m yr1], hydraulic conductivity
+K <- truncate(K, 300, 3000)
+n <- lognormal(0.25, 0.05) # [], effective soil porosity
+n <- truncate(n, 0.2, 0.35)
+BD <- lognormal(1650, 100) # [kg per m3], soil bulk density
+BD <- truncate(BD, 1500, 1750)
+foc <- uniform(0.0001, 0.005) # fraction organic carbon
+Koc <- normal(10, 3) # [m3 per kg], partition coefficient
+Koc <- truncate(Koc, 5, 20)
+
+T <- (n + BD * foc * Koc) * L / (K * i)
+summary(T)
+T
+```
+
+Maximum entropy version, from slide 70:
+
+T and Tind are pretty similar. In this case, the maximum entropy approach comes up with a similar distribution as the truncated approach.
+
+```{r Tind}
+L <- MEmmms(80, 120, 100, 11.55) # source-receptor distance
+i <- MEmmms(0.0003, 0.0008, 0.00055, 0.0001443) # hydraulic gradient
+K <- MEmmms(300, 3000, 1000, 750) # hydraulic conductivity
+n <- MEmmms(0.2, 0.35, 0.25, 0.05) # effective soil porosity
+BD <- MEmmms(1500, 1750, 1650, 100) # soil bulk density
+foc <- MEmmms(0.0001, 0.005, 0.00255, 0.001415) # fraction organic carbon
+Koc <- MEmmms(5, 20, 10, 3) # organic partition coefficient
+
+Tind <- (n + BD * foc * Koc) * L / (K * i)
+summary(Tind)
+Tind
+```
