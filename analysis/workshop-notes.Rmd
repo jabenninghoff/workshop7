@@ -32,3 +32,101 @@ Description from <https://www.sra.org/events-webinars/annual-meeting/program/ann
 * Emphasis will be placed on the interpretation of results and on how defensible decisions can be made even when little information is available.
 * The presentation style will be casual and interactive.
 * Participants will receive handouts of the slides and electronic files with software for the examples.
+
+# Presentation
+
+Notes from [Slide Presentation](assets/NoData-2021-Zoom.pptx):
+
+Does maximum entropy maximize uncertainty? Arguably yes, but in fact it can throw out information, see slide 79.
+
+Application of these methods requires judgement; choices of distributions and methods should be defensible, but ultimately are analyst opinions.
+
+Monte Carlo assumes that each variable is independent, and different. Be careful about how values are represented, see slide 88, and be careful about variables that are not independent.
+
+# Workshop Site
+
+Additional links and downloads available at <https://sites.google.com/site/hardlyanydata> (files have been downloaded to this repository):
+
+This tutorial explains how you can develop a fully probabilistic risk analysis even though there may be very little empirical data available on which to base the analysis. It compares the strengths and weakness of a traditional Monte Carlo assessment with probability bounds analysis in the R statistical computing environment which is freely available over the internet.
+
+## Overview of topics
+
+### Introduction
+
+Welcome
+Case studies: civil and aerospace engineering, exposure analysis, and conservation biology 
+Installation of R and workshop software
+
+### Monte Carlo simulation
+
+Random values and replications
+Distributions
+Independent and perfect sampling
+Calculations in R
+Interpreting results: tails are where the action is
+
+### Probability bounds analysis
+
+Kinds of uncertainty: the ‘open question’
+Probability boxes
+Independent, perfect, and Fréchet
+Calculation in R
+Interpreting results: fully probabilistic answers
+
+### Approximation versus enveloping
+
+Integrating Monte Carlo and probability bounding
+Fixed but unknown, or actually varying?
+Distributions, p-boxes, and interval ranges
+What you know and what you assume
+
+### Selecting input distributions
+
+Moments and ranges
+Maximum likelihood and maximum entropy
+Confidence boxes
+Shape assumptions to refine estimates
+
+### Correlations and dependencies
+
+Making no assumptions about dependence
+Perfect correlations
+Dispersive Monte Carlo dependence
+Independence maximizes entropy
+
+### Case studies in R
+
+Civil engineering:  dam safety
+Aerospace engineering:  spacecraft design
+Environmental protection: contaminant exposure analysis
+Conservation biology: estimating endangerment
+
+### Model uncertainty
+
+What-if studies
+Stochastic mixtures and Bayes model averaging
+Bounding methods
+Conservative methods for polynomial models
+
+### Sensitivity analyses
+
+Bang-for-buck control analysis
+Value of information: what data to collect
+More samples or better measurements
+
+## Presenters
+
+[Alexander Wimbush](https://www.researchgate.net/profile/Alexander-Wimbush), Ph.D. (2022), University of Liverpool, optimising medical diagnostic algorithms under uncertainty, communicating risks to patients, and calculation with confidence structures and possibility distributions; https://www.researchgate.net/profile/Alexander-Wimbush
+
+[Scott Ferson](https://sites.google.com/site/scottfersonsite/), Chair of Risk and Uncertainty at the [University of Liverpool](https://www.liverpool.ac.uk) [School of Engineering](https://www.liverpool.ac.uk/engineering/) and director of the [Institute for Risk and Uncertainty](https://www.liverpool.ac.uk/risk-and-uncertainty/); developing reliable mathematical and statistical tools for risk assessments and on methods for uncertainty analysis when empirical information is very sparse
+
+## Related links
+
+Society for Risk Analysis https://www.sra.org
+Society for Risk Analysis Annual Meeting https://www.sra.org/events-webinars/annual-meeting/
+On-line workshop registration https://sra.membershipsoftware.org/ev_calendar_day.asp?eventid=22&evreg1=2&t=&testmtype=&pub=1 https://members.sra.org/ev_calendar_day.asp?eventid=22&evreg1=2&t=&testmtype=&pub=1
+Society for Imprecise Probabilities http://www.sipta.org/
+Liverpool Institute for Risk and Uncertainty https://riskinstitute.uk https://www.liverpool.ac.uk/risk-and-uncertainty/
+Sandia National Laboratories' Epistemic Uncertainty Project https://sites.google.com/site/uncertaintyprojection/
+Applied Biomathematics uncertainty projects https://sites.google.com/site/abuncertainty/
+NSF workshop on risk perception and communication https://sites.google.com/site/montaukriskcommunication/
