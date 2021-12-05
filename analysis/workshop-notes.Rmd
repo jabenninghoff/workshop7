@@ -57,6 +57,28 @@ Second-order Monte Carlo analysis will be bounded within the p-box, and it's hig
 
 Are Monte Carlo and PBA combined? Yes, they are "nested" typically. This is what's done in [Info-Gap Analysis](https://en.wikipedia.org/wiki/Info-gap_decision_theory) - first present a more deterministic solution with all assumptions, then a p-box showing when the assumptions are relaxed.
 
+Summary of the "Neuroscience of Risk": address people's perception of incertitude and variability (which are different) in risk communication - see slides 231-234.
+
+`pba.r` has the ability to constrain bounds based on dependence and correlation.
+
+This is a bit off-topic, do you have general advice on applying these principles risk analysis and communication (for people with less math/statistics training)? Is it just as simple as "work to communicate both the variability and incertitude?"
+
+"Fermi Estimates" is a pretty good description of FAIR and Hubbard-style risk quantification.
+
+This paper and podcast make a good case to simply average the expert estimates - that there's no clear evidence that there’s anything better. https://doi.org/10.1016/j.ssci.2017.02.018 - https://safetyofwork.com/episodes/ep40-when-should-we-trust-expert-opinions-about-risk
+
+Paper on elliptical estimates from the Fermi estimation: https://scholarworks.utep.edu/cgi/viewcontent.cgi?article=1130&context=cs_techrep
+
+Recommends [Mark Burgman's](https://scholar.google.com/citations?user=O4YYKCsAAAAJ&hl=en&oi=ao) work on expert elicitation.
+
+Overall, Alex and Scott are making the case for using p-boxes to make better decisions under variability and incertitude (risk).
+
+# Notes
+
+This is the game on Alex's shelf. Risk with hidden objectives: <https://en.wikipedia.org/wiki/RisiKo!>
+
+This looks to be a pretty good introduction to basic Monte Carlo using R. https://www.countbayesie.com/blog/2015/3/3/6-amazing-trick-with-monte-carlo-simulations
+
 # Workshop Site
 
 Additional links and downloads available at <https://sites.google.com/site/hardlyanydata> (files have been downloaded to this repository):
