@@ -1,6 +1,6 @@
 ###############################################
 # Invoke R by double clicking its desktop icon
-# Enter rm(list = ls()) to clear R’s memory
+# Enter rm(list = ls()) to clear R's memory
 # Click File / Source R code on the main menu
 # Locate and Open the file sra.r
 ###############################################
@@ -214,7 +214,7 @@ TDI_ME = TDI
 
 ###############################################
 # Invoke R by double clicking its desktop icon
-# Enter rm(list = ls()) to clear R’s memory
+# Enter rm(list = ls()) to clear R's memory
 # Click File / Source R code on the main menu
 # Locate and Open the file pba.r
 ###############################################
@@ -448,7 +448,7 @@ TDI = FMR %|*|% (Cfish %*% Pfish %/% (AEfish %|*|% GEfish) %+% Cinverts %*% Pinv
 
 # 174  # pba.r gives a puffy answer
 EF = mmms(1, 52, 5.4, 10) 		# meals per year	// exposure frequency, censored data, n = 23
-IR = mmms(1.5, 675, 188, 113) 	# grams per meal	// poultry ingestion rate from EPA’s EFH
+IR = mmms(1.5, 675, 188, 113) 	# grams per meal	// poultry ingestion rate from EPA's EFH
 C = interval(7.1, 9.73) 			# mg per kg	// exposure point (mean) concentration
 LOSS = 0						# [dimensionaless] // loss due to cooking
 AT = 365.25 					# days per year	// averaging time (not just units conversion)
@@ -481,7 +481,7 @@ range(HQ)
 ###################################
 ## the analogous code for Risk Calc looks like this:
 #EF = mmms(1, 52, 5.4, 10) * 1 meals per year	// exposure frequency, censored data, n = 23
-#IR = mmms(1.5, 675, 188, 113) * 1grams per meal	// poultry ingestion rate from EPA’s EFH
+#IR = mmms(1.5, 675, 188, 113) * 1grams per meal	// poultry ingestion rate from EPA's EFH
 #C = [7.1, 9.73] * 1 mg per kg	// exposure point (mean) concentration
 #LOSS = 0	// loss due to cooking
 #AT = 365.25 days per year	// averaging time (not just units conversion)
