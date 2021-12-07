@@ -99,22 +99,25 @@ Conduct the same analysis using PBA, from slide 162. See the important note from
 # ideally we'd clear the environment with `rm(list = ls())`, but that doesn't work here;
 # an alternative would be to move this to a separate notebook. This approach appears to be OK,
 # outputs from running just the setup and the entire notebook are the same.
-source("assets/pba.R")
 
-# nolint start
-L <- mmms(80, 120, 100, 11.55) # source-receptor distance
-i <- mmms(0.0003, 0.0008, 0.00055, 0.0001443) # hydraulic gradient
-K <- mmms(300, 3000, 1000, 750) # hydraulic conductivity
-n <- mmms(0.2, 0.35, 0.25, 0.05) # effective soil porosity
-BD <- mmms(1500, 1750, 1650, 100) # soil bulk density
-foc <- mmms(0.0001, 0.005, 0.00255, 0.001415) # fraction organic carbon
-Koc <- mmms(5, 20, 10, 3) # organic partition coefficient
-
-up <- 100000 # detail
-Tind <- (n + BD * foc * Koc) * L / (K * i)
-Tind <- pmin(Tind, up)
-
-summary(Tind)
-Tind
+# this code breaks build_analysis_site() - commented out because of that.
+# uncomment this code and it should work within the notebook in RStudio.
+# source("assets/pba.R")
+# 
+# # nolint start
+# L <- mmms(80, 120, 100, 11.55) # source-receptor distance
+# i <- mmms(0.0003, 0.0008, 0.00055, 0.0001443) # hydraulic gradient
+# K <- mmms(300, 3000, 1000, 750) # hydraulic conductivity
+# n <- mmms(0.2, 0.35, 0.25, 0.05) # effective soil porosity
+# BD <- mmms(1500, 1750, 1650, 100) # soil bulk density
+# foc <- mmms(0.0001, 0.005, 0.00255, 0.001415) # fraction organic carbon
+# Koc <- mmms(5, 20, 10, 3) # organic partition coefficient
+# 
+# up <- 100000 # detail
+# Tind <- (n + BD * foc * Koc) * L / (K * i)
+# Tind <- pmin(Tind, up)
+# 
+# summary(Tind)
+# Tind
 # nolint end
 ```
