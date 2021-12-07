@@ -1,3 +1,5 @@
+# nolint start
+
 ################# testing
 test.mc <- function() {
 show(bernoulli(.3))
@@ -440,3 +442,5 @@ massreassignexamples <- function(a = N(5,1), b = U(4,5), th = 4, ith = c(4,5), p
   }
 
 massreassignexamples()
+
+# nolint end

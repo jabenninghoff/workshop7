@@ -1,3 +1,5 @@
+# nolint start
+
 ################# testing
 test.pba <- function() {
 show(bernoulli(.3))
@@ -391,3 +393,5 @@ massreassignexamples <- function(a = N(5,1), b = U(4,5), th = 4, ith = interval(
   }
 
 massreassignexamples()
+
+# nolint end
