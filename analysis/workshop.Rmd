@@ -30,7 +30,7 @@ Monte Carlo example from class using `sra.R`; contaminant plume (from Lobascio),
 View the cumulative probability plot by entering the letter in the console.
 
 ```{r T}
-source("sra.R")
+source("assets/sra.R")
 
 # nolint start
 L <- uniform(80, 120) # [m], source-receptor distance
@@ -99,7 +99,7 @@ Conduct the same analysis using PBA, from slide 162. See the important note from
 # ideally we'd clear the environment with `rm(list = ls())`, but that doesn't work here;
 # an alternative would be to move this to a separate notebook. This approach appears to be OK,
 # outputs from running just the setup and the entire notebook are the same.
-source("pba.R")
+source("assets/pba.R")
 
 # nolint start
 L <- mmms(80, 120, 100, 11.55) # source-receptor distance
