@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+<meta name="date" content="2021-12-05" />
+
+<title>SRA Workshop 7</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">workshop7 notebooks</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="reference/index.html">Reference</a>
+</li>
+<li>
+  <a href="news/index.html">Changelog</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Analysis
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="workshop-notes.html">SRA Workshop 7 Notes</a>
+    </li>
+    <li>
+      <a href="workshop.html">SRA Workshop 7</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/jabenninghoff/workshop7/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">SRA Workshop 7</h1>
+<h4 class="date">2021-12-05</h4>
+
+</div>
+
+
+<p>Working notebook for SRA 2021 Workshop 7, “Monte Carlo simulation and probability bounds analysis in R with hardly any data (Instructors: Ferson &amp; Grey)”</p>
+<pre class="r"><code>library(workshop7)
+library(MASS)
+library(sn)</code></pre>
+<div id="instructions" class="section level1">
+<h1>Instructions</h1>
+<p>Download <code>sra.r</code> and <code>pba.r</code> from <a href="https://sites.google.com/site/hardlyanydata" class="uri">https://sites.google.com/site/hardlyanydata</a> and source it into R. Set <code>RStudio = TRUE</code> for use within RStudio and save the file. The library also requires the package <code>sn</code>. Use <code>rm(list = ls())</code> to clear R enviornment.</p>
+<p>There is another version of <code>pba.r</code> on <a href="https://github.com/ScottFerson/pba.r">GitHub</a></p>
+</div>
+<div id="monte-carlo" class="section level1">
+<h1>Monte Carlo</h1>
+<p>Monte Carlo example from class using <code>sra.R</code>; contaminant plume (from Lobascio), slide 37-39 in the workshop <a href="assets/NoData-2021-Zoom.pptx">PowerPoint</a>:</p>
+<p>View the cumulative probability plot by entering the letter in the console.</p>
+<pre class="r"><code>source(&quot;assets/sra.R&quot;)</code></pre>
+<pre><code>## :sra&gt; library loaded</code></pre>
+<pre class="r"><code># nolint start
+L &lt;- uniform(80, 120) # [m], source-receptor distance
+i &lt;- uniform(0.0003, 0.0008) # [], hydraulic gradient
+K &lt;- lognormal(1000, 750) # [m yr1], hydraulic conductivity
+n &lt;- lognormal(0.25, 0.05) # [], effective soil porosity
+BD &lt;- lognormal(1650, 100) # [kg per m3], soil bulk density
+foc &lt;- uniform(0.0001, 0.005) # fraction organic carbon
+Koc &lt;- normal(10, 3) # [m3 per kg], partition coefficient
+
+T &lt;- (n + BD * foc * Koc) * L / (K * i) # all variables assumed independent
+summary(T)</code></pre>
+<pre><code>## 
+## Monte Carlo distribution summary
+##   Mean: 13072.63
+##   Variance: 259601208
+##   Std Deviation: 16112.14
+##   Width of interquartile range: 12892.17
+##   Width of overall range: 269434.7
+##   Order statistics
+##      Left (min) value: -2069.634
+##      1st percentile: 330.9319
+##      5th percentile: 893.6733
+##      25th percentile: 3598.729
+##      Median (50th%ile): 8078.318
+##      75th percentile: 16490.9
+##      95th percentile: 40944.16
+##      99th percentile: 77745.85
+##      Right (max) value: 267365
+##   Replications: 20000</code></pre>
+<pre class="r"><code>T</code></pre>
+<p><img src="workshop_files/figure-html/T-1.png" width="768" /></p>
+<pre><code>## MC (min=-2069.63392113653, median=8078.31842168168, mean=13072.6304225275, max=267365.038682096)</code></pre>
+<pre class="r"><code># nolint end</code></pre>
+<p>Truncated version, from slide 40:</p>
+<pre class="r"><code># nolint start
+L &lt;- uniform(80, 120) # [m], source-receptor distance
+i &lt;- uniform(0.0003, 0.0008) # [], hydraulic gradient
+K &lt;- lognormal(1000, 750) # [m yr1], hydraulic conductivity
+K &lt;- truncate(K, 300, 3000)
+n &lt;- lognormal(0.25, 0.05) # [], effective soil porosity
+n &lt;- truncate(n, 0.2, 0.35)
+BD &lt;- lognormal(1650, 100) # [kg per m3], soil bulk density
+BD &lt;- truncate(BD, 1500, 1750)
+foc &lt;- uniform(0.0001, 0.005) # fraction organic carbon
+Koc &lt;- normal(10, 3) # [m3 per kg], partition coefficient
+Koc &lt;- truncate(Koc, 5, 20)
+
+T &lt;- (n + BD * foc * Koc) * L / (K * i)
+summary(T)</code></pre>
+<pre><code>## 
+## Monte Carlo distribution summary
+##   Mean: 12386.86
+##   Variance: 170799317
+##   Std Deviation: 13069.02
+##   Width of interquartile range: 12618.93
+##   Width of overall range: 172268.5
+##   Order statistics
+##      Left (min) value: 55.33592
+##      1st percentile: 374.6823
+##      5th percentile: 982.9308
+##      25th percentile: 3767.082
+##      Median (50th%ile): 8213.686
+##      75th percentile: 16386.01
+##      95th percentile: 38094.21
+##      99th percentile: 61982.85
+##      Right (max) value: 172323.9
+##   Replications: 20000</code></pre>
+<pre class="r"><code>T</code></pre>
+<p><img src="workshop_files/figure-html/T_truncated-1.png" width="768" /></p>
+<pre><code>## MC (min=55.3359203942764, median=8213.68629729789, mean=12386.8569261968, max=172323.877612084)</code></pre>
+<pre class="r"><code># nolint end</code></pre>
+<p>Maximum entropy version, from slide 70:</p>
+<p>T and Tind are pretty similar. In this case, the maximum entropy approach comes up with a similar distribution as the truncated approach.</p>
+<pre class="r"><code># nolint start
+L &lt;- MEmmms(80, 120, 100, 11.55) # source-receptor distance
+i &lt;- MEmmms(0.0003, 0.0008, 0.00055, 0.0001443) # hydraulic gradient
+K &lt;- MEmmms(300, 3000, 1000, 750) # hydraulic conductivity
+n &lt;- MEmmms(0.2, 0.35, 0.25, 0.05) # effective soil porosity
+BD &lt;- MEmmms(1500, 1750, 1650, 100) # soil bulk density
+foc &lt;- MEmmms(0.0001, 0.005, 0.00255, 0.001415) # fraction organic carbon
+Koc &lt;- MEmmms(5, 20, 10, 3) # organic partition coefficient
+
+Tind &lt;- (n + BD * foc * Koc) * L / (K * i)
+summary(Tind)</code></pre>
+<pre><code>## 
+## Monte Carlo distribution summary
+##   Mean: 13776.58
+##   Variance: 220047975
+##   Std Deviation: 14834.01
+##   Width of interquartile range: 14912.01
+##   Width of overall range: 134918.1
+##   Order statistics
+##      Left (min) value: 52.17354
+##      1st percentile: 322.7951
+##      5th percentile: 931.2013
+##      25th percentile: 3734.229
+##      Median (50th%ile): 8453.378
+##      75th percentile: 18646.24
+##      95th percentile: 44430.39
+##      99th percentile: 69983.1
+##      Right (max) value: 134970.3
+##   Replications: 20000</code></pre>
+<pre class="r"><code>Tind</code></pre>
+<p><img src="workshop_files/figure-html/Tind-1.png" width="768" /></p>
+<pre><code>## MC (min=52.1735400108669, median=8453.37832594269, mean=13776.5828717612, max=134970.2696248)</code></pre>
+<pre class="r"><code># nolint end</code></pre>
+</div>
+<div id="probability-bounds-analysis" class="section level1">
+<h1>Probability Bounds Analysis</h1>
+<p>Conduct the same analysis using PBA, from slide 162. See the important note from slide 162 below.</p>
+<p><em>Note: N.B. The implementation of mmms in pba.r is incomplete so, while its results are bounds, they are not best possible bounds</em></p>
+<pre class="r"><code># ideally we&#39;d clear the environment with `rm(list = ls())`, but that doesn&#39;t work here;
+# an alternative would be to move this to a separate notebook. This approach appears to be OK,
+# outputs from running just the setup and the entire notebook are the same.
+
+# this code breaks build_analysis_site() - commented out because of that.
+# uncomment this code and it should work within the notebook in RStudio.
+# nolint start
+# source(&quot;assets/pba.R&quot;)
+#
+# L &lt;- mmms(80, 120, 100, 11.55) # source-receptor distance
+# i &lt;- mmms(0.0003, 0.0008, 0.00055, 0.0001443) # hydraulic gradient
+# K &lt;- mmms(300, 3000, 1000, 750) # hydraulic conductivity
+# n &lt;- mmms(0.2, 0.35, 0.25, 0.05) # effective soil porosity
+# BD &lt;- mmms(1500, 1750, 1650, 100) # soil bulk density
+# foc &lt;- mmms(0.0001, 0.005, 0.00255, 0.001415) # fraction organic carbon
+# Koc &lt;- mmms(5, 20, 10, 3) # organic partition coefficient
+#
+# up &lt;- 100000 # detail
+# Tind &lt;- (n + BD * foc * Koc) * L / (K * i)
+# Tind &lt;- pmin(Tind, up)
+#
+# summary(Tind)
+# Tind
+# nolint end</code></pre>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiBTUkEgV29ya3Nob3AgNwpkYXRlOiAnMjAyMS0xMi0wNScKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQ6CiAgICB0b2M6IHllcwogICAgdG9jX2Zsb2F0OgogICAgICBjb2xsYXBzZWQ6IG5vCiAgICAgIHNtb290aF9zY3JvbGw6IG5vCi0tLQoKV29ya2luZyBub3RlYm9vayBmb3IgU1JBIDIwMjEgV29ya3Nob3AgNywgIk1vbnRlIENhcmxvIHNpbXVsYXRpb24gYW5kIHByb2JhYmlsaXR5IGJvdW5kcyBhbmFseXNpcyBpbiBSIHdpdGggaGFyZGx5IGFueSBkYXRhIChJbnN0cnVjdG9yczogRmVyc29uICYgR3JleSkiCgpgYGB7ciBzZXR1cCwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRX0KbGlicmFyeSh3b3Jrc2hvcDcpCmxpYnJhcnkoTUFTUykKbGlicmFyeShzbikKYGBgCgojIEluc3RydWN0aW9ucwoKRG93bmxvYWQgYHNyYS5yYCBhbmQgYHBiYS5yYCBmcm9tIDxodHRwczovL3NpdGVzLmdvb2dsZS5jb20vc2l0ZS9oYXJkbHlhbnlkYXRhPiBhbmQgc291cmNlIGl0IGludG8gUi4gU2V0IGBSU3R1ZGlvID0gVFJVRWAgZm9yIHVzZSB3aXRoaW4gUlN0dWRpbyBhbmQgc2F2ZSB0aGUgZmlsZS4gVGhlIGxpYnJhcnkgYWxzbyByZXF1aXJlcyB0aGUgcGFja2FnZSBgc25gLiBVc2UgYHJtKGxpc3QgPSBscygpKWAgdG8gY2xlYXIgUiBlbnZpb3JubWVudC4KClRoZXJlIGlzIGFub3RoZXIgdmVyc2lvbiBvZiBgcGJhLnJgIG9uIFtHaXRIdWJdKGh0dHBzOi8vZ2l0aHViLmNvbS9TY290dEZlcnNvbi9wYmEucikKCiMgTW9udGUgQ2FybG8KCk1vbnRlIENhcmxvIGV4YW1wbGUgZnJvbSBjbGFzcyB1c2luZyBgc3JhLlJgOyBjb250YW1pbmFudCBwbHVtZSAoZnJvbSBMb2Jhc2NpbyksIHNsaWRlIDM3LTM5IGluIHRoZSB3b3Jrc2hvcCBbUG93ZXJQb2ludF0oYXNzZXRzL05vRGF0YS0yMDIxLVpvb20ucHB0eCk6CgpWaWV3IHRoZSBjdW11bGF0aXZlIHByb2JhYmlsaXR5IHBsb3QgYnkgZW50ZXJpbmcgdGhlIGxldHRlciBpbiB0aGUgY29uc29sZS4KCmBgYHtyIFR9CnNvdXJjZSgiYXNzZXRzL3NyYS5SIikKCiMgbm9saW50IHN0YXJ0CkwgPC0gdW5pZm9ybSg4MCwgMTIwKSAjIFttXSwgc291cmNlLXJlY2VwdG9yIGRpc3RhbmNlCmkgPC0gdW5pZm9ybSgwLjAwMDMsIDAuMDAwOCkgIyBbXSwgaHlkcmF1bGljIGdyYWRpZW50CksgPC0gbG9nbm9ybWFsKDEwMDAsIDc1MCkgIyBbbSB5cu+ArTFdLCBoeWRyYXVsaWMgY29uZHVjdGl2aXR5Cm4gPC0gbG9nbm9ybWFsKDAuMjUsIDAuMDUpICMgW10sIGVmZmVjdGl2ZSBzb2lsIHBvcm9zaXR5CkJEIDwtIGxvZ25vcm1hbCgxNjUwLCAxMDApICMgW2tnIHBlciBtM10sIHNvaWwgYnVsayBkZW5zaXR5CmZvYyA8LSB1bmlmb3JtKDAuMDAwMSwgMC4wMDUpICMgZnJhY3Rpb24gb3JnYW5pYyBjYXJib24KS29jIDwtIG5vcm1hbCgxMCwgMykgIyBbbTMgcGVyIGtnXSwgcGFydGl0aW9uIGNvZWZmaWNpZW50CgpUIDwtIChuICsgQkQgKiBmb2MgKiBLb2MpICogTCAvIChLICogaSkgIyBhbGwgdmFyaWFibGVzIGFzc3VtZWQgaW5kZXBlbmRlbnQKc3VtbWFyeShUKQpUCiMgbm9saW50IGVuZApgYGAKClRydW5jYXRlZCB2ZXJzaW9uLCBmcm9tIHNsaWRlIDQwOgoKYGBge3IgVF90cnVuY2F0ZWR9CiMgbm9saW50IHN0YXJ0CkwgPC0gdW5pZm9ybSg4MCwgMTIwKSAjIFttXSwgc291cmNlLXJlY2VwdG9yIGRpc3RhbmNlCmkgPC0gdW5pZm9ybSgwLjAwMDMsIDAuMDAwOCkgIyBbXSwgaHlkcmF1bGljIGdyYWRpZW50CksgPC0gbG9nbm9ybWFsKDEwMDAsIDc1MCkgIyBbbSB5cu+ArTFdLCBoeWRyYXVsaWMgY29uZHVjdGl2aXR5CksgPC0gdHJ1bmNhdGUoSywgMzAwLCAzMDAwKQpuIDwtIGxvZ25vcm1hbCgwLjI1LCAwLjA1KSAjIFtdLCBlZmZlY3RpdmUgc29pbCBwb3Jvc2l0eQpuIDwtIHRydW5jYXRlKG4sIDAuMiwgMC4zNSkKQkQgPC0gbG9nbm9ybWFsKDE2NTAsIDEwMCkgIyBba2cgcGVyIG0zXSwgc29pbCBidWxrIGRlbnNpdHkKQkQgPC0gdHJ1bmNhdGUoQkQsIDE1MDAsIDE3NTApCmZvYyA8LSB1bmlmb3JtKDAuMDAwMSwgMC4wMDUpICMgZnJhY3Rpb24gb3JnYW5pYyBjYXJib24KS29jIDwtIG5vcm1hbCgxMCwgMykgIyBbbTMgcGVyIGtnXSwgcGFydGl0aW9uIGNvZWZmaWNpZW50CktvYyA8LSB0cnVuY2F0ZShLb2MsIDUsIDIwKQoKVCA8LSAobiArIEJEICogZm9jICogS29jKSAqIEwgLyAoSyAqIGkpCnN1bW1hcnkoVCkKVAojIG5vbGludCBlbmQKYGBgCgpNYXhpbXVtIGVudHJvcHkgdmVyc2lvbiwgZnJvbSBzbGlkZSA3MDoKClQgYW5kIFRpbmQgYXJlIHByZXR0eSBzaW1pbGFyLiBJbiB0aGlzIGNhc2UsIHRoZSBtYXhpbXVtIGVudHJvcHkgYXBwcm9hY2ggY29tZXMgdXAgd2l0aCBhIHNpbWlsYXIgZGlzdHJpYnV0aW9uIGFzIHRoZSB0cnVuY2F0ZWQgYXBwcm9hY2guCgpgYGB7ciBUaW5kfQojIG5vbGludCBzdGFydApMIDwtIE1FbW1tcyg4MCwgMTIwLCAxMDAsIDExLjU1KSAjIHNvdXJjZS1yZWNlcHRvciBkaXN0YW5jZQppIDwtIE1FbW1tcygwLjAwMDMsIDAuMDAwOCwgMC4wMDA1NSwgMC4wMDAxNDQzKSAjIGh5ZHJhdWxpYyBncmFkaWVudApLIDwtIE1FbW1tcygzMDAsIDMwMDAsIDEwMDAsIDc1MCkgIyBoeWRyYXVsaWMgY29uZHVjdGl2aXR5Cm4gPC0gTUVtbW1zKDAuMiwgMC4zNSwgMC4yNSwgMC4wNSkgIyBlZmZlY3RpdmUgc29pbCBwb3Jvc2l0eQpCRCA8LSBNRW1tbXMoMTUwMCwgMTc1MCwgMTY1MCwgMTAwKSAjIHNvaWwgYnVsayBkZW5zaXR5CmZvYyA8LSBNRW1tbXMoMC4wMDAxLCAwLjAwNSwgMC4wMDI1NSwgMC4wMDE0MTUpICMgZnJhY3Rpb24gb3JnYW5pYyBjYXJib24KS29jIDwtIE1FbW1tcyg1LCAyMCwgMTAsIDMpICMgb3JnYW5pYyBwYXJ0aXRpb24gY29lZmZpY2llbnQKClRpbmQgPC0gKG4gKyBCRCAqIGZvYyAqIEtvYykgKiBMIC8gKEsgKiBpKQpzdW1tYXJ5KFRpbmQpClRpbmQKIyBub2xpbnQgZW5kCmBgYAoKIyBQcm9iYWJpbGl0eSBCb3VuZHMgQW5hbHlzaXMKCkNvbmR1Y3QgdGhlIHNhbWUgYW5hbHlzaXMgdXNpbmcgUEJBLCBmcm9tIHNsaWRlIDE2Mi4gU2VlIHRoZSBpbXBvcnRhbnQgbm90ZSBmcm9tIHNsaWRlIDE2MiBiZWxvdy4KCipOb3RlOiBOLkIuIFRoZSBpbXBsZW1lbnRhdGlvbiBvZiBtbW1zIGluIHBiYS5yIGlzIGluY29tcGxldGUgc28sIHdoaWxlIGl0cyByZXN1bHRzIGFyZSBib3VuZHMsIHRoZXkgYXJlIG5vdCBiZXN0IHBvc3NpYmxlIGJvdW5kcyoKCmBgYHtyIFRpbmRfcGJhfQojIGlkZWFsbHkgd2UnZCBjbGVhciB0aGUgZW52aXJvbm1lbnQgd2l0aCBgcm0obGlzdCA9IGxzKCkpYCwgYnV0IHRoYXQgZG9lc24ndCB3b3JrIGhlcmU7CiMgYW4gYWx0ZXJuYXRpdmUgd291bGQgYmUgdG8gbW92ZSB0aGlzIHRvIGEgc2VwYXJhdGUgbm90ZWJvb2suIFRoaXMgYXBwcm9hY2ggYXBwZWFycyB0byBiZSBPSywKIyBvdXRwdXRzIGZyb20gcnVubmluZyBqdXN0IHRoZSBzZXR1cCBhbmQgdGhlIGVudGlyZSBub3RlYm9vayBhcmUgdGhlIHNhbWUuCgojIHRoaXMgY29kZSBicmVha3MgYnVpbGRfYW5hbHlzaXNfc2l0ZSgpIC0gY29tbWVudGVkIG91dCBiZWNhdXNlIG9mIHRoYXQuCiMgdW5jb21tZW50IHRoaXMgY29kZSBhbmQgaXQgc2hvdWxkIHdvcmsgd2l0aGluIHRoZSBub3RlYm9vayBpbiBSU3R1ZGlvLgojIG5vbGludCBzdGFydAojIHNvdXJjZSgiYXNzZXRzL3BiYS5SIikKIwojIEwgPC0gbW1tcyg4MCwgMTIwLCAxMDAsIDExLjU1KSAjIHNvdXJjZS1yZWNlcHRvciBkaXN0YW5jZQojIGkgPC0gbW1tcygwLjAwMDMsIDAuMDAwOCwgMC4wMDA1NSwgMC4wMDAxNDQzKSAjIGh5ZHJhdWxpYyBncmFkaWVudAojIEsgPC0gbW1tcygzMDAsIDMwMDAsIDEwMDAsIDc1MCkgIyBoeWRyYXVsaWMgY29uZHVjdGl2aXR5CiMgbiA8LSBtbW1zKDAuMiwgMC4zNSwgMC4yNSwgMC4wNSkgIyBlZmZlY3RpdmUgc29pbCBwb3Jvc2l0eQojIEJEIDwtIG1tbXMoMTUwMCwgMTc1MCwgMTY1MCwgMTAwKSAjIHNvaWwgYnVsayBkZW5zaXR5CiMgZm9jIDwtIG1tbXMoMC4wMDAxLCAwLjAwNSwgMC4wMDI1NSwgMC4wMDE0MTUpICMgZnJhY3Rpb24gb3JnYW5pYyBjYXJib24KIyBLb2MgPC0gbW1tcyg1LCAyMCwgMTAsIDMpICMgb3JnYW5pYyBwYXJ0aXRpb24gY29lZmZpY2llbnQKIwojIHVwIDwtIDEwMDAwMCAjIGRldGFpbAojIFRpbmQgPC0gKG4gKyBCRCAqIGZvYyAqIEtvYykgKiBMIC8gKEsgKiBpKQojIFRpbmQgPC0gcG1pbihUaW5kLCB1cCkKIwojIHN1bW1hcnkoVGluZCkKIyBUaW5kCiMgbm9saW50IGVuZApgYGAK</div>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("workshop.Rmd");
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
