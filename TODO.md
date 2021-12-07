@@ -1,3 +1,3 @@
 # TODO
 
-- [ ] Add workshop lab notebook
+- [x] Add workshop lab notebook
