@@ -1,3 +1,5 @@
+# nolint start
+
 ###############################################
 # Invoke R by double clicking its desktop icon
 # Enter rm(list = ls()) to clear R's memory
@@ -519,3 +521,5 @@ e = a ^ b
 edf(e)
 mean(e)
 var(e)
+
+# nolint end

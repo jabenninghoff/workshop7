@@ -1,3 +1,5 @@
+# nolint start
+
 RStudio = TRUE
 #######################################################
 # Probability Bounds Analysis S4 Library for R                                              
@@ -5811,3 +5813,4 @@ return(TRUE)
 
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+# nolint end

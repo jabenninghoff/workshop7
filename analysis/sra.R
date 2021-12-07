@@ -1,3 +1,4 @@
+# nolint start
 
 RStudio = TRUE
 
@@ -1200,3 +1201,5 @@ cat(':sra> library loaded\n')
 ##########################################################################
 # End of Monte Carlo Simulation S4 Library for the R Language
 ##########################################################################
+
+# nolint end

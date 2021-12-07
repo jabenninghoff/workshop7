@@ -32,6 +32,7 @@ View the cumulative probability plot by entering the letter in the console.
 ```{r T}
 source("sra.R")
 
+# nolint start
 L <- uniform(80, 120) # [m], source-receptor distance
 i <- uniform(0.0003, 0.0008) # [], hydraulic gradient
 K <- lognormal(1000, 750) # [m yr1], hydraulic conductivity
@@ -43,11 +44,13 @@ Koc <- normal(10, 3) # [m3 per kg], partition coefficient
 T <- (n + BD * foc * Koc) * L / (K * i) # all variables assumed independent
 summary(T)
 T
+# nolint end
 ```
 
 Truncated version, from slide 40:
 
 ```{r T_truncated}
+# nolint start
 L <- uniform(80, 120) # [m], source-receptor distance
 i <- uniform(0.0003, 0.0008) # [], hydraulic gradient
 K <- lognormal(1000, 750) # [m yr1], hydraulic conductivity
@@ -63,6 +66,7 @@ Koc <- truncate(Koc, 5, 20)
 T <- (n + BD * foc * Koc) * L / (K * i)
 summary(T)
 T
+# nolint end
 ```
 
 Maximum entropy version, from slide 70:
@@ -70,6 +74,7 @@ Maximum entropy version, from slide 70:
 T and Tind are pretty similar. In this case, the maximum entropy approach comes up with a similar distribution as the truncated approach.
 
 ```{r Tind}
+# nolint start
 L <- MEmmms(80, 120, 100, 11.55) # source-receptor distance
 i <- MEmmms(0.0003, 0.0008, 0.00055, 0.0001443) # hydraulic gradient
 K <- MEmmms(300, 3000, 1000, 750) # hydraulic conductivity
@@ -81,6 +86,7 @@ Koc <- MEmmms(5, 20, 10, 3) # organic partition coefficient
 Tind <- (n + BD * foc * Koc) * L / (K * i)
 summary(Tind)
 Tind
+# nolint end
 ```
 
 # Probability Bounds Analysis
@@ -95,6 +101,7 @@ Conduct the same analysis using PBA, from slide 162. See the important note from
 # outputs from running just the setup and the entire notebook are the same.
 source("pba.R")
 
+# nolint start
 L <- mmms(80, 120, 100, 11.55) # source-receptor distance
 i <- mmms(0.0003, 0.0008, 0.00055, 0.0001443) # hydraulic gradient
 K <- mmms(300, 3000, 1000, 750) # hydraulic conductivity
@@ -109,4 +116,5 @@ Tind <- pmin(Tind, up)
 
 summary(Tind)
 Tind
+# nolint end
 ```
