@@ -1,5 +1,5 @@
 ---
-title: SRA Workshop 7 Notes
+title: "SRA Workshop 7 Notes"
 date: '2021-12-04'
 output:
   html_notebook:
