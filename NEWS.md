@@ -1,3 +1,7 @@
+# workshop7 1.0.2
+
+* Maintenance update
+
 # workshop7 1.0.1
 
 * Added SRA Workshop 7: Working notebook for SRA 2021 Workshop 7, "Monte Carlo simulation and probability bounds analysis in R with hardly any data (Instructors: Ferson & Grey)"
