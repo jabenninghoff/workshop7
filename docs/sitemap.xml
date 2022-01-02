@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jabenninghoff.github.io/workshop7/404.html</loc>
+  </url>
+  <url>
+    <loc>https://jabenninghoff.github.io/workshop7/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://jabenninghoff.github.io/workshop7/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://jabenninghoff.github.io/workshop7/TODO.html</loc>
+  </url>
+  <url>
+    <loc>https://jabenninghoff.github.io/workshop7/authors.html</loc>
+  </url>
+  <url>
     <loc>https://jabenninghoff.github.io/workshop7/index.html</loc>
+  </url>
+  <url>
+    <loc>https://jabenninghoff.github.io/workshop7/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://jabenninghoff.github.io/workshop7/reference/index.html</loc>
   </url>
   <url>
     <loc>https://jabenninghoff.github.io/workshop7/reference/workshop7-package.html</loc>
