@@ -2,16 +2,17 @@ Package: workshop7
 Title: SRA 2021 Workshop 7
 Version: 1.0.1.9000
 Authors@R: 
-    person("John", "Benninghoff", , "jbenninghoff@mac.com", role = c("aut", "cre"),
+    person("John", "Benninghoff", email = "jbenninghoff@mac.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-6230-4742"))
 Description: Analysis package for SRA 2021 Workshop 7: Monte Carlo simulation and
     probability bounds analysis in R with hardly any data.
 License: MIT + file LICENSE
+URL: https://jabenninghoff.github.io/workshop7,
+    https://github.com/jabenninghoff/workshop7
+BugReports: https://github.com/jabenninghoff/workshop7/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-URL: https://jabenninghoff.github.io/workshop7/, https://github.com/jabenninghoff/workshop7
-BugReports: https://github.com/jabenninghoff/workshop7/issues
 Suggests: 
     devtools,
     rdev (>= 0.4.2)
