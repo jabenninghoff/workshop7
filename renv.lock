@@ -835,16 +835,16 @@
     },
     "rdev": {
       "Package": "rdev",
-      "Version": "0.5.3.9000",
+      "Version": "0.6.1",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteUsername": "jabenninghoff",
       "RemoteRepo": "rdev",
       "RemoteRef": "main",
-      "RemoteSha": "7c50c8a0e52883f7f420c38bacbcd9d712f52091",
+      "RemoteSha": "43b1b02ee76f4c499960e1aaab901c524d15c2ae",
       "RemoteHost": "api.github.com",
       "Remotes": "jimhester/lintr",
-      "Hash": "c8ffee1d4311482a7174fdc26caef4e1"
+      "Hash": "60e177601fc20ed9c2721010b6101c76"
     },
     "recipes": {
       "Package": "recipes",
