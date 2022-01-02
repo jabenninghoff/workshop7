@@ -11,10 +11,6 @@ output:
 
 Notes for SRA 2021 Workshop 7, "Monte Carlo simulation and probability bounds analysis in R with hardly any data (Instructors: Ferson & Grey)" held 2021-12-05.
 
-```{r setup, message=FALSE, warning=FALSE}
-library(workshop7)
-```
-
 # Description
 
 Description from <https://www.sra.org/events-webinars/annual-meeting/program/annual-meeting-workshops/>. Attend virtual session on [Pathable](https://sra21.us2.pathable.com/meetings/virtual/9G8ri2iAPqvT5iz5q).
