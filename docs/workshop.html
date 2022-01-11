@@ -419,25 +419,25 @@ T &lt;- (n + BD * foc * Koc) * L / (K * i) # all variables assumed independent
 summary(T)</code></pre>
 <pre><code>## 
 ## Monte Carlo distribution summary
-##   Mean: 13006.07
-##   Variance: 234918230
-##   Std Deviation: 15327.04
-##   Width of interquartile range: 12634.45
-##   Width of overall range: 242796.5
+##   Mean: 13116.06
+##   Variance: 248166977
+##   Std Deviation: 15753.32
+##   Width of interquartile range: 12860.71
+##   Width of overall range: 228305.9
 ##   Order statistics
-##      Left (min) value: -5608.701
-##      1st percentile: 345.0594
-##      5th percentile: 937.812
-##      25th percentile: 3755.253
-##      Median (50th%ile): 8215.618
-##      75th percentile: 16389.7
-##      95th percentile: 40515.36
-##      99th percentile: 74091.62
-##      Right (max) value: 237187.8
+##      Left (min) value: -1591.6
+##      1st percentile: 336.1636
+##      5th percentile: 897.8828
+##      25th percentile: 3632.825
+##      Median (50th%ile): 8172.007
+##      75th percentile: 16493.53
+##      95th percentile: 41324.6
+##      99th percentile: 78175.15
+##      Right (max) value: 226714.3
 ##   Replications: 20000</code></pre>
 <pre class="r"><code>T</code></pre>
 <p><img src="workshop_files/figure-html/T-1.png" width="768" /></p>
-<pre><code>## MC (min=-5608.70126111165, median=8215.61819086565, mean=13006.0731331664, max=237187.796825478)</code></pre>
+<pre><code>## MC (min=-1591.60018518469, median=8172.00742754993, mean=13116.0644980112, max=226714.337542848)</code></pre>
 <pre class="r"><code># nolint end</code></pre>
 <p>Truncated version, from slide 40:</p>
 <pre class="r"><code># nolint start
@@ -457,25 +457,25 @@ T &lt;- (n + BD * foc * Koc) * L / (K * i)
 summary(T)</code></pre>
 <pre><code>## 
 ## Monte Carlo distribution summary
-##   Mean: 12277.8
-##   Variance: 159017126
-##   Std Deviation: 12610.2
-##   Width of interquartile range: 12240.71
-##   Width of overall range: 127222
+##   Mean: 12017.63
+##   Variance: 158365065
+##   Std Deviation: 12584.32
+##   Width of interquartile range: 12197.53
+##   Width of overall range: 155036.6
 ##   Order statistics
-##      Left (min) value: 100.1755
-##      1st percentile: 390.0766
-##      5th percentile: 1006.849
-##      25th percentile: 3884.616
-##      Median (50th%ile): 8226.517
-##      75th percentile: 16125.32
-##      95th percentile: 37569.44
-##      99th percentile: 60725.12
-##      Right (max) value: 127322.2
+##      Left (min) value: 55.87855
+##      1st percentile: 378.9489
+##      5th percentile: 961.1276
+##      25th percentile: 3675.235
+##      Median (50th%ile): 8010.397
+##      75th percentile: 15872.76
+##      95th percentile: 37106.85
+##      99th percentile: 59714.01
+##      Right (max) value: 155092.5
 ##   Replications: 20000</code></pre>
 <pre class="r"><code>T</code></pre>
 <p><img src="workshop_files/figure-html/T_truncated-1.png" width="768" /></p>
-<pre><code>## MC (min=100.175461058737, median=8226.51735397964, mean=12277.8038969671, max=127322.217443664)</code></pre>
+<pre><code>## MC (min=55.8785539486899, median=8010.39652219142, mean=12017.6313223363, max=155092.51753668)</code></pre>
 <pre class="r"><code># nolint end</code></pre>
 <p>Maximum entropy version, from slide 70:</p>
 <p>T and Tind are pretty similar. In this case, the maximum entropy approach comes up with a similar distribution as the truncated approach.</p>
@@ -492,25 +492,25 @@ Tind &lt;- (n + BD * foc * Koc) * L / (K * i)
 summary(Tind)</code></pre>
 <pre><code>## 
 ## Monte Carlo distribution summary
-##   Mean: 13931.94
-##   Variance: 235839213
-##   Std Deviation: 15357.06
-##   Width of interquartile range: 15026.15
-##   Width of overall range: 177332.9
+##   Mean: 13940.97
+##   Variance: 225322061
+##   Std Deviation: 15010.73
+##   Width of interquartile range: 15379.63
+##   Width of overall range: 161517.5
 ##   Order statistics
-##      Left (min) value: 82.6157
-##      1st percentile: 356.1792
-##      5th percentile: 958.111
-##      25th percentile: 3684.889
-##      Median (50th%ile): 8376.99
-##      75th percentile: 18711.04
-##      95th percentile: 45282.27
-##      99th percentile: 72366.85
-##      Right (max) value: 177415.6
+##      Left (min) value: 77.79182
+##      1st percentile: 367.0371
+##      5th percentile: 976.763
+##      25th percentile: 3650.776
+##      Median (50th%ile): 8616.895
+##      75th percentile: 19030.4
+##      95th percentile: 44762.51
+##      99th percentile: 70383.04
+##      Right (max) value: 161595.3
 ##   Replications: 20000</code></pre>
 <pre class="r"><code>Tind</code></pre>
 <p><img src="workshop_files/figure-html/Tind-1.png" width="768" /></p>
-<pre><code>## MC (min=82.6156992534246, median=8376.98959165688, mean=13931.9387481766, max=177415.555157852)</code></pre>
+<pre><code>## MC (min=77.7918227768493, median=8616.89505507672, mean=13940.9664698269, max=161595.269721078)</code></pre>
 <pre class="r"><code># nolint end</code></pre>
 </div>
 <div id="probability-bounds-analysis" class="section level1">
