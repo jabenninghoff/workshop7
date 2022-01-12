@@ -1,3 +1,7 @@
+# workshop7 1.0.4
+
+* Maintenance updates
+
 # workshop7 1.0.3
 
 * Updated README to automatically generate notebook list (with dates and links)
