@@ -15,6 +15,8 @@
 Carlo simulation and probability bounds analysis in R with hardly any
 data.
 
+Feel free to use and/or fork this project!
+
 ## Notebooks
 
 Notebooks in this package:

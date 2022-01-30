@@ -22,6 +22,8 @@ Suggests:
     purrr,
     rmarkdown,
     devtools,
-    rdev (>= 0.4.2)
+    rdev (>= 0.8.9),
+    testthat (>= 3.0.0)
 Remotes: 
     jabenninghoff/rdev
+Config/testthat/edition: 3
