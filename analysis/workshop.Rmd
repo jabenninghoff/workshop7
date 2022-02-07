@@ -18,7 +18,7 @@ library(sn)
 
 # Instructions
 
-Download `sra.r` and `pba.r` from <https://sites.google.com/site/hardlyanydata> and source it into R. Set `RStudio = TRUE` for use within RStudio and save the file. The library also requires the package `sn`. Use `rm(list = ls())` to clear R enviornment.
+Download `sra.r` and `pba.r` from <https://sites.google.com/site/hardlyanydata> and source it into R. Set `RStudio = TRUE` for use within RStudio and save the file. The library also requires the package `sn`. Use `rm(list = ls())` to clear R environment.
 
 There is another version of `pba.r` on [GitHub](https://github.com/ScottFerson/pba.r)
 

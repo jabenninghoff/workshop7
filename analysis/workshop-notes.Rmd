@@ -17,7 +17,7 @@ Description from <https://www.sra.org/events-webinars/annual-meeting/program/ann
 
 **Workshop #7: Full Day 8AM-5PM** | Monte Carlo simulation and probability bounds analysis in R with hardly any data (Instructors: Ferson & Grey)
 
-* Features hands-on examples worked in R on your own laptap, from raw data to final decision.
+* Features hands-on examples worked in R on your own laptop, from raw data to final decision.
 * Introduces and compares Monte Carlo simulation and probability bounds analysis for developing probabilistic risk analyses when little or no empirical data are available.
 * You can use your laptop to work the examples, or just follow along if you prefer.
 * The examples illustrate the basic problems risk analysts face: not having much data to estimate inputs, not knowing the distribution shapes, not knowing their correlations, and not even being sure about the model form.
