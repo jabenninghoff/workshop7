@@ -26,6 +26,8 @@ test_that("Package has no spelling errors", {
 test_that("Notebooks have no spelling errors", {
   skip_on_cran()
   skip_on_covr()
+  # skip spelling on Windows due to problems with character conversion
+  skip_on_os("windows")
   withr::local_dir(pkg_dir)
   if (fs::dir_exists("analysis")) {
     expect_identical(rdev::spell_check_notebooks()$word, character(0))
