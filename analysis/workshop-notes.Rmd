@@ -35,7 +35,7 @@ Notes from [Slide Presentation](assets/NoData-2021-Zoom.pptx):
 
 Does maximum entropy maximize uncertainty? Arguably yes, but in fact it can throw out information, see slide 79.
 
-Application of these methods requires judgement; choices of distributions and methods should be defensible, but ultimately are analyst opinions.
+Application of these methods requires judgment; choices of distributions and methods should be defensible, but ultimately are analyst opinions.
 
 Monte Carlo assumes that each variable is independent, and different. Be careful about how values are represented, see slide 88, and be careful about variables that are not independent.
 
