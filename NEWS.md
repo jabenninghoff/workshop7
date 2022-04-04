@@ -1,3 +1,7 @@
+# workshop7 1.0.9
+
+* Maintenance updates, spellcheck
+
 # workshop7 1.0.8
 
 * Maintenance updates
