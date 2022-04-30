@@ -2,32 +2,32 @@ Package: workshop7
 Title: SRA 2021 Workshop 7
 Version: 1.0.9.9000
 Authors@R: 
-    person("John", "Benninghoff", email = "jbenninghoff@mac.com", role = c("aut", "cre"),
+    person("John", "Benninghoff", , "jbenninghoff@mac.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-6230-4742"))
-Description: Analysis package for SRA 2021 Workshop 7: Monte Carlo simulation and
-    probability bounds analysis in R with hardly any data.
+Description: Analysis package for SRA 2021 Workshop 7: Monte Carlo
+    simulation and probability bounds analysis in R with hardly any data.
 License: MIT + file LICENSE
 URL: https://jabenninghoff.github.io/workshop7,
     https://github.com/jabenninghoff/workshop7
 BugReports: https://github.com/jabenninghoff/workshop7/issues
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
 Suggests: 
-    MASS,
-    sn,
     desc,
+    devtools,
     dplyr,
     fs,
-    purrr,
-    rmarkdown,
-    devtools,
-    rdev (>= 0.8.9),
-    testthat (>= 3.0.0),
-    spelling,
+    MASS,
     pkgdown,
+    purrr,
+    rdev (>= 0.8.9),
+    rmarkdown,
+    sn,
+    spelling,
+    testthat (>= 3.0.0),
     withr
 Remotes: 
     jabenninghoff/rdev
 Config/testthat/edition: 3
+Encoding: UTF-8
 Language: en-US
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
