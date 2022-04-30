@@ -25,7 +25,8 @@ Suggests:
     rdev (>= 0.8.9),
     testthat (>= 3.0.0),
     spelling,
-    pkgdown
+    pkgdown,
+    withr
 Remotes: 
     jabenninghoff/rdev
 Config/testthat/edition: 3
