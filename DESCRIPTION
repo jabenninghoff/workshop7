@@ -18,7 +18,7 @@ Suggests:
     MASS,
     pkgdown,
     purrr,
-    rdev (>= 0.8.9),
+    rdev,
     rmarkdown,
     sn,
     spelling,
