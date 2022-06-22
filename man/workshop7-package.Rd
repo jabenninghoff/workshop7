@@ -11,7 +11,7 @@ Analysis package for SRA 2021 Workshop 7: Monte Carlo simulation and probability
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://jabenninghoff.github.io/workshop7}
+  \item \url{https://jabenninghoff.github.io/workshop7/}
   \item \url{https://github.com/jabenninghoff/workshop7}
   \item Report bugs at \url{https://github.com/jabenninghoff/workshop7/issues}
 }
