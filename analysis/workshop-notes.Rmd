@@ -157,7 +157,7 @@ More samples or better measurements
 Society for Risk Analysis https://www.sra.org
 Society for Risk Analysis Annual Meeting https://www.sra.org/events-webinars/annual-meeting/
 On-line workshop registration https://sra.membershipsoftware.org/ev_calendar_day.asp?eventid=22&evreg1=2&t=&testmtype=&pub=1 https://members.sra.org/ev_calendar_day.asp?eventid=22&evreg1=2&t=&testmtype=&pub=1
-Society for Imprecise Probabilities http://www.sipta.org/
+Society for Imprecise Probabilities https://sipta.org/
 Liverpool Institute for Risk and Uncertainty https://riskinstitute.uk https://www.liverpool.ac.uk/risk-and-uncertainty/
 Sandia National Laboratories' Epistemic Uncertainty Project https://sites.google.com/site/uncertaintyprojection/
 Applied Biomathematics uncertainty projects https://sites.google.com/site/abuncertainty/
