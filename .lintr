@@ -1,1 +1,9 @@
 linters: linters_with_defaults(line_length_linter(100))
+exclusions: list(
+    # ignore imported R scripts
+    "analysis/assets/examples.R",
+    "analysis/assets/pba.R",
+    "analysis/assets/sra.R",
+    "analysis/assets/test-pba.R",
+    "analysis/assets/test-sba.R"
+  )
