@@ -25,6 +25,7 @@ Suggests:
     sn,
     spelling,
     testthat (>= 3.0.0),
+    usethis,
     withr
 Remotes: 
     jabenninghoff/rdev
