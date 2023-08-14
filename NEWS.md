@@ -1,3 +1,7 @@
+# workshop7 1.0.16
+
+* Maintenance updates
+
 # workshop7 1.0.15
 
 * Maintenance updates
