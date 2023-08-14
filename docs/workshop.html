@@ -14,7 +14,7 @@
 
 <title>SRA Workshop 7</title>
 
-<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -431,25 +431,25 @@ T &lt;- (n + BD * foc * Koc) * L / (K * i) # all variables assumed independent
 summary(T)</code></pre>
 <pre><code>## 
 ## Monte Carlo distribution summary
-##   Mean: 13010.02
-##   Variance: 249741838
-##   Std Deviation: 15803.22
-##   Width of interquartile range: 12994.79
-##   Width of overall range: 289122.8
+##   Mean: 13020.6
+##   Variance: 243741351
+##   Std Deviation: 15612.22
+##   Width of interquartile range: 12907.38
+##   Width of overall range: 470550.9
 ##   Order statistics
-##      Left (min) value: -4384.51
-##      1st percentile: 355.1352
-##      5th percentile: 930.3786
-##      25th percentile: 3652.059
-##      Median (50th%ile): 8152.966
-##      75th percentile: 16646.85
-##      95th percentile: 40666.13
-##      99th percentile: 74208.94
-##      Right (max) value: 284738.3
+##      Left (min) value: -5755.258
+##      1st percentile: 322.0654
+##      5th percentile: 929.6737
+##      25th percentile: 3673.525
+##      Median (50th%ile): 8243.558
+##      75th percentile: 16580.9
+##      95th percentile: 40786.8
+##      99th percentile: 73903.69
+##      Right (max) value: 464795.7
 ##   Replications: 20000</code></pre>
 <pre class="r"><code>T</code></pre>
 <p><img src="workshop_files/figure-html/T-1.png" width="768" /></p>
-<pre><code>## MC (min=-4384.5096484057, median=8152.96604184288, mean=13010.0155513066, max=284738.258430836)</code></pre>
+<pre><code>## MC (min=-5755.25808770771, median=8243.55765662944, mean=13020.5990639135, max=464795.684825082)</code></pre>
 <pre class="r"><code># nolint end</code></pre>
 <p>Truncated version, from slide 40:</p>
 <pre class="r"><code># nolint start
@@ -469,25 +469,25 @@ T &lt;- (n + BD * foc * Koc) * L / (K * i)
 summary(T)</code></pre>
 <pre><code>## 
 ## Monte Carlo distribution summary
-##   Mean: 12292.26
-##   Variance: 162235194
-##   Std Deviation: 12737.16
-##   Width of interquartile range: 12415.68
-##   Width of overall range: 129198
+##   Mean: 12176.79
+##   Variance: 156400649
+##   Std Deviation: 12506.02
+##   Width of interquartile range: 12313.84
+##   Width of overall range: 120542.6
 ##   Order statistics
-##      Left (min) value: 86.15108
-##      1st percentile: 409.5533
-##      5th percentile: 946.0121
-##      25th percentile: 3805.604
-##      Median (50th%ile): 8270.41
-##      75th percentile: 16221.29
-##      95th percentile: 37889.92
-##      99th percentile: 60482.54
-##      Right (max) value: 129284.2
+##      Left (min) value: 83.91045
+##      1st percentile: 381.3782
+##      5th percentile: 993.4511
+##      25th percentile: 3825.729
+##      Median (50th%ile): 8138.908
+##      75th percentile: 16139.57
+##      95th percentile: 37166.27
+##      99th percentile: 59363.52
+##      Right (max) value: 120626.5
 ##   Replications: 20000</code></pre>
 <pre class="r"><code>T</code></pre>
 <p><img src="workshop_files/figure-html/T_truncated-1.png" width="768" /></p>
-<pre><code>## MC (min=86.1510752628033, median=8270.40973405153, mean=12292.2628424022, max=129284.190969308)</code></pre>
+<pre><code>## MC (min=83.910449162993, median=8138.90758184003, mean=12176.7923273256, max=120626.485598163)</code></pre>
 <pre class="r"><code># nolint end</code></pre>
 <p>Maximum entropy version, from slide 70:</p>
 <p>T and Tind are pretty similar. In this case, the maximum entropy
@@ -506,25 +506,25 @@ Tind &lt;- (n + BD * foc * Koc) * L / (K * i)
 summary(Tind)</code></pre>
 <pre><code>## 
 ## Monte Carlo distribution summary
-##   Mean: 13870.6
-##   Variance: 229713524
-##   Std Deviation: 15156.3
-##   Width of interquartile range: 15357.99
-##   Width of overall range: 146966.5
+##   Mean: 14019.65
+##   Variance: 231998151
+##   Std Deviation: 15231.49
+##   Width of interquartile range: 15358.78
+##   Width of overall range: 161737.7
 ##   Order statistics
-##      Left (min) value: 92.90831
-##      1st percentile: 339.9302
-##      5th percentile: 946.0153
-##      25th percentile: 3634.461
-##      Median (50th%ile): 8417.248
-##      75th percentile: 18992.45
-##      95th percentile: 44922.04
-##      99th percentile: 70276.94
-##      Right (max) value: 147059.4
+##      Left (min) value: 78.2941
+##      1st percentile: 334.1201
+##      5th percentile: 942.793
+##      25th percentile: 3731.272
+##      Median (50th%ile): 8614.646
+##      75th percentile: 19090.05
+##      95th percentile: 44875.82
+##      99th percentile: 70952.71
+##      Right (max) value: 161816
 ##   Replications: 20000</code></pre>
 <pre class="r"><code>Tind</code></pre>
 <p><img src="workshop_files/figure-html/Tind-1.png" width="768" /></p>
-<pre><code>## MC (min=92.9083074200587, median=8417.24759081494, mean=13870.5955474431, max=147059.391390288)</code></pre>
+<pre><code>## MC (min=78.2941028686568, median=8614.64627911851, mean=14019.6521202794, max=161815.978584815)</code></pre>
 <pre class="r"><code># nolint end</code></pre>
 </div>
 <div id="probability-bounds-analysis" class="section level1">
