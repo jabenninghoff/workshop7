@@ -1,3 +1,7 @@
+# workshop7 1.1.0
+
+* Switch to Bootstrap 5
+
 # workshop7 1.0.16
 
 * Maintenance updates
