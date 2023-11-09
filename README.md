@@ -38,8 +38,8 @@ You can install the development version of workshop7 from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("jabenninghoff/workshop7")
+# install.packages("remotes")
+remotes::install_github("jabenninghoff/workshop7")
 ```
 
 Or using renv:
