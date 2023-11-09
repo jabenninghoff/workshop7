@@ -1,4 +1,6 @@
 url: https://jabenninghoff.github.io/workshop7/
+template:
+  bootstrap: 5
 navbar:
   structure:
     left:
