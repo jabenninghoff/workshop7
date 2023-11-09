@@ -11,6 +11,10 @@ options(
 if (interactive()) {
   suppressMessages(require(devtools))
   suppressMessages(require(rdev))
+  # create a wrapper function for rdev::ci() as a workaround for long running styler, lintr
+  ci <- function(styler = FALSE, lintr = FALSE, ...) {
+    rdev::ci(styler = styler, lintr = lintr, ...)
+  }
   if (!suppressMessages(suppressWarnings(require(pkgload::pkg_name("."), character.only = TRUE)))) {
     devtools::load_all(".")
   }
