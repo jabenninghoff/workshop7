@@ -1,3 +1,7 @@
+# workshop7 1.1.1
+
+* Fix site rendering
+
 # workshop7 1.1.0
 
 * Switch to Bootstrap 5
