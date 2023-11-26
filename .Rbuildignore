@@ -15,5 +15,4 @@
 ^README\.Rmd$
 ^renv\.lock$
 ^renv$
-^TODO\.md$
 ^workshop7\.Rproj$
