@@ -1,3 +1,7 @@
+# workshop7 1.1.6
+
+* Updated for R 4.4.0
+
 # workshop7 1.1.5
 
 * Maintenance updates
