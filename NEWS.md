@@ -1,3 +1,7 @@
+# workshop7 1.1.8
+
+* Corrected GitHub language stats
+
 # workshop7 1.1.7
 
 * Updated for R 4.5.0
