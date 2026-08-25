@@ -1,6 +1,7 @@
 url: https://jabenninghoff.github.io/workshop7/
 template:
   bootstrap: 5
+llm-docs: no
 navbar:
   structure:
     left:

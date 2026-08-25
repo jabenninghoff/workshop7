@@ -1,3 +1,7 @@
+# workshop7 1.1.9
+
+* Initial upkeep using `rdev::use_upkeep_issue()`
+
 # workshop7 1.1.8
 
 * Corrected GitHub language stats
