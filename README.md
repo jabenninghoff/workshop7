@@ -6,7 +6,6 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/jabenninghoff/workshop7/workflows/R-CMD-check/badge.svg)](https://github.com/jabenninghoff/workshop7/actions)
-[![lint](https://github.com/jabenninghoff/workshop7/workflows/lint/badge.svg)](https://github.com/jabenninghoff/workshop7/actions)
 <!-- badges: end -->
 
 ## Overview

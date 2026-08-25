@@ -1,3 +1,7 @@
+# workshop7 1.1.10
+
+* Removed non-functional lint badge from README
+
 # workshop7 1.1.9
 
 * Initial upkeep using `rdev::use_upkeep_issue()`
