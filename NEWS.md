@@ -1,3 +1,7 @@
+# workshop7 1.1.11
+
+* Update R-CMD-check to run on macOS only
+
 # workshop7 1.1.10
 
 * Removed non-functional lint badge from README
